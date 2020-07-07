@@ -11,6 +11,18 @@
 <link rel = 'stylesheet' type = 'text/css' href = 'numericalApproximation.css' />
 <link href = 'http://fonts.googleapis.com/css?family=Inconsolata' rel = 'stylesheet' type = 'text/css' >
 <script src = "numericalApproximation.js"></script>
+	<script>
+		function inputField(num, min, max){
+  const MIN = min || 1;
+  const MAX = max || 10;
+  const parsed = parseInt(num)
+  return Math.min(Math.max(parsed, MIN), MAX)
+}
+if(inputField>=10)
+{
+alert("invalid input");
+}
+	</script>
 <title>Computer-Programming</title>
 </head>
 
@@ -31,8 +43,8 @@
 		<div class = 'inputDivisionTitle' ><div class = 'experimentPic' ></div><div class = 'experimentText' >Initialize</div></div>
 		<div class = 'inputDivisionBody' id = 'inputDivisionSimpleLoop' >
 			<div class = 'variableText' >Initialize variables</div>
-			<input  placeholder = 'Value of a' class = 'inputField' type = 'text'   id = 'valueA' size = '10' >
-			<input  placeholder = 'Value of b' class = 'inputField' type = 'text'   id = 'valueB' size = '10' >
+			<input  placeholder = 'Value of a' class = 'inputField' type = 'text'   id = 'valueA' size = '1' >
+			<input  placeholder = 'Value of b' class = 'inputField' type = 'text'   id = 'valueB' size = '1' >
 			<button  class = 'button startButton' id = 'okBtnId' >OK</button>
 			<button class = 'buttonDisable myStartButton' id = 'startBtnId' disabled>Start</button><button class = 'buttonDisable myStartButton hide' id = 'stopBtnId' disabled>Stop</button>
 			<button class = 'buttonDisable nextButton' id = 'nextBtnId' disabled>Next</button>
